@@ -14,6 +14,10 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import Maintenance from "./pages/Maintenance";
+
+// Maintenance Mode Flag
+const isMaintenanceMode = true;
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -25,6 +29,17 @@ const ScrollToTop = () => {
 };
 
 function App() {
+  if (isMaintenanceMode) {
+    return (
+      <Router>
+        <ScrollToTop />
+        <Routes>
+          <Route path="*" element={<Maintenance />} />
+        </Routes>
+      </Router>
+    );
+  }
+
   return (
     <Router>
       <ScrollToTop />
