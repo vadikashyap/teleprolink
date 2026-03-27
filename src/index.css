@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #f19119;
+  --color-primary-dark: #d17a12;
+  --color-primary-light: #f5a847;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 inline-block text-center shadow-lg hover:shadow-primary/30;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 inline-block text-center;
+  }
+
+  .section-padding {
+    @apply py-12 md:py-20 lg:py-32;
+  }
+
+  .heading-1 {
+    @apply text-4xl md:text-[42px] lg:text-[42px] font-bold tracking-tight text-gray-900;
+  }
+
+  .heading-2 {
+    @apply text-3xl md:text-[42px] lg:text-[42px] font-bold tracking-tight text-gray-900;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 15px rgba(241, 145, 25, 0.3);
+  }
+
+  @keyframes pulse-slow {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
