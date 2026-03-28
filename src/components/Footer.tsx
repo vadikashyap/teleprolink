@@ -115,7 +115,7 @@ const Footer = () => {
             <li>
               <Link
                 to='/legal-compliance'
-                className='hover:text-primary transition-colors'>
+                className='hover:text-primary transition-colors '>
                 Legal & Compliance
               </Link>
             </li>
