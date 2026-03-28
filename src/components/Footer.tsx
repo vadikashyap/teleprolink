@@ -114,9 +114,9 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                to='/trust'
+                to='/legal-compliance'
                 className='hover:text-primary transition-colors'>
-                Trust & Security
+                Legal & Compliance
               </Link>
             </li>
           </ul>

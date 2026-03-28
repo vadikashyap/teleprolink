@@ -4,6 +4,7 @@ import SEO from "../components/SEO";
 import tplRoundLogo from "../assets/tpl-round-logo.svg";
 import { cn } from "../utils/cn";
 import Reveal from "../components/Reveal";
+import ConnectedClients from "../components/ConnectedClients";
 import {
   ArrowRight,
   MessageSquare,
@@ -346,6 +347,9 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      {/* Connected Clients Section */}
+      <ConnectedClients />
     </div>
   );
 };
