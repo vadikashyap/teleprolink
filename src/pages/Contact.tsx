@@ -136,36 +136,10 @@ const ContactPage = () => {
                       Direct Email
                     </h3>
                     <p className='text-base md:text-lg text-gray-600 hover:text-primary transition-colors cursor-pointer'>
-                      info@teleprolink.com
+                      sales@teleprolink.com
                     </p>
                   </div>
                 </div>
-              </div>
-
-              <div className='pt-8 md:pt-10 border-t border-gray-100'>
-                <h3 className='text-lg md:text-xl font-bold text-gray-900 mb-4 md:mb-6'>
-                  Connect with our Founder
-                </h3>
-                <a
-                  href=''
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='inline-flex items-center space-x-4 p-4 md:p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-xl transition-all group w-full sm:w-auto'>
-                  <div className='w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors'>
-                    <Linkedin size={24} className='md:hidden' />
-                    <Linkedin size={32} className='hidden md:block' />
-                  </div>
-                  <div>
-                    <h4 className='font-bold text-gray-900 text-sm md:text-base'>
-                      Ashish Dhar
-                    </h4>
-                    <p className='text-gray-500 text-xs md:text-sm'>Founder</p>
-                  </div>
-                  <ArrowRight
-                    className='ml-auto md:ml-4 text-gray-300 group-hover:text-primary transition-colors group-hover:translate-x-1'
-                    size={24}
-                  />
-                </a>
               </div>
             </div>
           </Reveal>
@@ -321,9 +295,9 @@ const ContactPage = () => {
           </p>
           <div className='pt-6 md:pt-8'>
             <a
-              href='mailto:info@teleprolink.com'
+              href='mailto:sales@teleprolink.com'
               className='text-primary text-xl md:text-2xl font-bold hover:underline'>
-              info@teleprolink.com
+              sales@teleprolink.com
             </a>
           </div>
         </div>

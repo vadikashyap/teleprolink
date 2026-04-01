@@ -5,6 +5,7 @@ import {
   Phone,
   MapPin,
   Linkedin,
+  X,
   Globe,
   MessageSquare,
 } from "lucide-react";
@@ -39,9 +40,11 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a
-                href='mailto:info@teleprolink.com'
+                href=''
+                target='_blank'
+                rel='noopener noreferrer'
                 className='p-2 bg-gray-800 rounded-full hover:bg-primary transition-colors'>
-                <Mail size={20} />
+                <X size={20} />
               </a>
             </div>
           </div>
@@ -135,7 +138,7 @@ const Footer = () => {
             </li>
             <li className='flex items-center space-x-3'>
               <Mail className='text-primary flex-shrink-0' size={18} />
-              <span>info@teleprolink.com</span>
+              <span>sales@teleprolink.com</span>
             </li>
           </ul>
         </div>

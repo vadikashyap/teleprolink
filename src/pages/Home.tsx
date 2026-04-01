@@ -349,7 +349,7 @@ const HomePage = () => {
       </section>
 
       {/* Connected Clients Section */}
-      <ConnectedClients />
+      {/* <ConnectedClients /> */}
     </div>
   );
 };

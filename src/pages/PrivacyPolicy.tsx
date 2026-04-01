@@ -106,7 +106,7 @@ const PrivacyPolicy = () => {
                 If you have questions about this Privacy Policy, please contact
                 us at:
                 <br />
-                <strong>Email:</strong> info@teleprolink.com
+                <strong>Email:</strong> sales@teleprolink.com
                 <br />
                 <strong>Address:</strong> Central, Hong Kong
               </p>

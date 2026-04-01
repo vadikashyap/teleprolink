@@ -58,7 +58,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Link to='/contact' className='btn-primary py-2 px-6'>
-            Get Started
+            Book a Demo
           </Link>
         </div>
 
@@ -92,7 +92,7 @@ const Navbar = () => {
               to='/contact'
               className='btn-primary w-full text-center mt-4'
               onClick={() => setIsOpen(false)}>
-              Get Started
+              Book a Demo
             </Link>
           </div>
         </div>
