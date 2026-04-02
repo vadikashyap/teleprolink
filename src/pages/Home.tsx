@@ -30,8 +30,23 @@ const HomePage = () => {
         description='Headquartered in Hong Kong, TeleProLink provides high-quality A2P SMS and crystal-clear voice solutions designed for startups, enterprises, and fintech companies.'
       />
       {/* Hero Section */}
-      <section className='relative overflow-hidden pt-10 lg:pt-20'>
-        <div className='container-wide grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
+      <section className='relative overflow-hidden pt-10 lg:pt-20 bg-gray-50/50'>
+        {/* Background Decorative Elements */}
+        <div className='absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none'>
+          <div className='absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px] animate-pulse-slow' />
+          <div className='absolute top-[20%] -right-[5%] w-[30%] h-[30%] bg-primary/10 rounded-full blur-[100px] animate-pulse-slow delay-700' />
+          <div className='absolute -bottom-[10%] left-[20%] w-[25%] h-[25%] bg-primary/5 rounded-full blur-[80px] animate-pulse-slow delay-1000' />
+
+          {/* Wave-like background shape */}
+          <svg
+            className='absolute bottom-0 left-0 w-full h-auto text-white fill-current'
+            viewBox='0 0 1440 320'
+            preserveAspectRatio='none'>
+            <path d='M0,160L48,176C96,192,192,224,288,229.3C384,235,480,213,576,186.7C672,160,768,128,864,133.3C960,139,1056,181,1152,186.7C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'></path>
+          </svg>
+        </div>
+
+        <div className='container-wide grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -68,29 +83,6 @@ const HomePage = () => {
                 Let's Connect
               </Link>
             </div>
-
-            <div className='flex items-center space-x-8 pt-8'>
-              <div className='flex flex-col'>
-                <span className='text-2xl font-bold text-gray-900'>19+</span>
-                <span className='text-sm text-gray-500 uppercase tracking-wider'>
-                  Years Exp
-                </span>
-              </div>
-              <div className='w-px h-10 bg-gray-200' />
-              <div className='flex flex-col'>
-                <span className='text-2xl font-bold text-gray-900'>Global</span>
-                <span className='text-sm text-gray-500 uppercase tracking-wider'>
-                  Reach
-                </span>
-              </div>
-              <div className='w-px h-10 bg-gray-200' />
-              <div className='flex flex-col'>
-                <span className='text-2xl font-bold text-gray-900'>A2P</span>
-                <span className='text-sm text-gray-500 uppercase tracking-wider'>
-                  Monetization
-                </span>
-              </div>
-            </div>
           </motion.div>
 
           <motion.div
@@ -99,13 +91,18 @@ const HomePage = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className='relative lg:ml-auto w-full max-w-xl mx-auto lg:mx-0 mb-15'>
             {/* Visual representation of connectivity/network */}
-            <div className='relative p-6 md:p-12 bg-gradient-to-br from-primary/10 to-primary/5 rounded-[2.5rem] border border-primary/10 shadow-2xl overflow-hidden'>
-              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
+            <div className='relative p-6 md:p-12 bg-gradient-to-br from-primary/10 to-primary/5 rounded-[3rem] border border-primary/10 shadow-[0_20px_50px_rgba(241,145,25,0.1)] overflow-hidden group/container'>
+              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5" />
+
+              {/* Floating elements animation */}
+              <div className='absolute -top-10 -right-10 w-40 h-40 bg-primary/30 rounded-full blur-3xl animate-pulse-slow' />
+              <div className='absolute -bottom-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl animate-pulse-slow delay-1000' />
+              <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/5 rounded-full blur-2xl group-hover/container:scale-125 transition-transform duration-1000' />
 
               <div className='grid grid-cols-2 gap-6 md:gap-8 relative z-10'>
                 {/* SMS Solutions */}
-                <div className='aspect-square bg-white rounded-3xl shadow-xl flex flex-col items-center justify-center p-6 md:p-8 space-y-4 border border-gray-50 hover:border-primary/20 transition-all hover:scale-105 group'>
-                  <div className='w-14 h-14 md:w-20 md:h-20 bg-primary/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors'>
+                <div className='aspect-square bg-white/80 backdrop-blur-sm rounded-[2rem] shadow-xl flex flex-col items-center justify-center p-6 md:p-8 space-y-4 border border-white hover:border-primary/30 transition-all hover:scale-105 group shadow-primary/5 hover:shadow-primary/10'>
+                  <div className='w-14 h-14 md:w-20 md:h-20 bg-primary/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 transform group-hover:rotate-6'>
                     <MessageCircle size={32} className='md:hidden' />
                     <MessageCircle size={44} className='hidden md:block' />
                   </div>
@@ -115,8 +112,8 @@ const HomePage = () => {
                 </div>
 
                 {/* Voice Solutions */}
-                <div className='aspect-square bg-white rounded-3xl shadow-xl flex flex-col items-center justify-center p-6 md:p-8 space-y-4 border border-gray-50 hover:border-primary/20 transition-all hover:scale-105 group'>
-                  <div className='w-14 h-14 md:w-20 md:h-20 bg-primary/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors'>
+                <div className='aspect-square bg-white/80 backdrop-blur-sm rounded-[2rem] shadow-xl flex flex-col items-center justify-center p-6 md:p-8 space-y-4 border border-white hover:border-primary/30 transition-all hover:scale-105 group shadow-primary/5 hover:shadow-primary/10'>
+                  <div className='w-14 h-14 md:w-20 md:h-20 bg-primary/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 transform group-hover:-rotate-6'>
                     <PhoneCall size={32} className='md:hidden' />
                     <PhoneCall size={44} className='hidden md:block' />
                   </div>
@@ -126,8 +123,8 @@ const HomePage = () => {
                 </div>
 
                 {/* OTP Security */}
-                <div className='aspect-square bg-white rounded-3xl shadow-xl flex flex-col items-center justify-center p-6 md:p-8 space-y-4 border border-gray-50 hover:border-primary/20 transition-all hover:scale-105 group'>
-                  <div className='w-14 h-14 md:w-20 md:h-20 bg-primary/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors'>
+                <div className='aspect-square bg-white/80 backdrop-blur-sm rounded-[2rem] shadow-xl flex flex-col items-center justify-center p-6 md:p-8 space-y-4 border border-white hover:border-primary/30 transition-all hover:scale-105 group shadow-primary/5 hover:shadow-primary/10'>
+                  <div className='w-14 h-14 md:w-20 md:h-20 bg-primary/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 transform group-hover:-rotate-6'>
                     <Lock size={32} className='md:hidden' />
                     <Lock size={44} className='hidden md:block' />
                   </div>
@@ -137,8 +134,8 @@ const HomePage = () => {
                 </div>
 
                 {/* Global Connectivity */}
-                <div className='aspect-square bg-white rounded-3xl shadow-xl flex flex-col items-center justify-center p-6 md:p-8 space-y-4 border border-gray-50 hover:border-primary/20 transition-all hover:scale-105 group'>
-                  <div className='w-14 h-14 md:w-20 md:h-20 bg-primary/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors'>
+                <div className='aspect-square bg-white/80 backdrop-blur-sm rounded-[2rem] shadow-xl flex flex-col items-center justify-center p-6 md:p-8 space-y-4 border border-white hover:border-primary/30 transition-all hover:scale-105 group shadow-primary/5 hover:shadow-primary/10'>
+                  <div className='w-14 h-14 md:w-20 md:h-20 bg-primary/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 transform group-hover:rotate-6'>
                     <Globe2 size={32} className='md:hidden' />
                     <Globe2 size={44} className='hidden md:block' />
                   </div>
@@ -147,23 +144,26 @@ const HomePage = () => {
                   </span>
                 </div>
               </div>
-
-              {/* Decorative elements */}
-              <div className='absolute -top-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl animate-pulse' />
-              <div className='absolute -bottom-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl animate-pulse delay-1000' />
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Who We Serve */}
-      <section className='bg-white pt-16 overflow-hidden'>
-        <div className='container-wide'>
+      <section className='bg-white pt-16 overflow-hidden relative'>
+        {/* Background blobs for "Who We Serve" */}
+        <div className='absolute top-1/2 left-0 w-64 h-64 bg-primary/5 rounded-full blur-[100px] -translate-x-1/2' />
+        <div className='absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[120px] translate-x-1/4' />
+
+        <div className='container-wide relative z-10'>
           <Reveal>
             <div className='text-center max-w-3xl mx-auto'>
-              <h2 className='inline-block px-6 py-2 text-gray-900 font-bold text-2xl md:text-3xl rounded-lg mb-8'>
+              <h2 className='inline-block px-6 py-2 bg-primary/10 text-primary font-bold text-2xl md:text-3xl rounded-full mb-8'>
                 Who We Serve
               </h2>
+              <p className='heading-2 mb-6'>
+                Solutions for Every Business Scale
+              </p>
               <p className='text-lg text-gray-600'>
                 Empowering businesses of all sizes to connect with their
                 customers instantly and efficiently through our specialized
@@ -174,7 +174,7 @@ const HomePage = () => {
 
           <div className='relative flex flex-col lg:flex-row items-center justify-center min-h-[600px] py-12'>
             {/* Background Glow */}
-            <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full hidden lg:block' />
+            <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full hidden lg:block animate-pulse-slow' />
 
             {/* Left Column - Curved */}
             <div className='flex flex-col gap-8 w-full lg:w-1/3 z-10'>
@@ -227,7 +227,7 @@ const HomePage = () => {
                 <img
                   src={tplRoundLogo}
                   alt='TeleProLink'
-                  className='w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 object-contain relative z-10 animate-pulse-slow drop-shadow-[0_20px_50px_rgba(241,145,25,0.3)]'
+                  className='w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 object-contain relative z-10 animate-float drop-shadow-[0_20px_50px_rgba(241,145,25,0.3)]'
                 />
               </div>
             </div>
@@ -280,10 +280,19 @@ const HomePage = () => {
       </section>
 
       {/* Why Choose TeleProLink */}
-      <section className='container-wide py-16 md:py-24 lg:py-32'>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center'>
+      <section className='relative py-16 md:py-24 lg:py-32 overflow-hidden'>
+        {/* Background Waves/Blobs */}
+        <div className='absolute top-0 right-0 w-[50%] h-[50%] bg-primary/5 rounded-full blur-[120px] translate-x-1/4 -translate-y-1/4' />
+        <div className='absolute bottom-0 left-0 w-[40%] h-[40%] bg-primary/5 rounded-full blur-[100px] -translate-x-1/4 translate-y-1/4' />
+
+        <div className='container-wide grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center relative z-10'>
           <div className='space-y-12'>
-            <h2 className='heading-2'>Why Choose TeleProLink?</h2>
+            <Reveal>
+              <div className='space-y-4'>
+                <h2 className='heading-2'>Why Choose TeleProLink?</h2>
+                <div className='w-24 h-1.5 bg-primary rounded-full' />
+              </div>
+            </Reveal>
 
             <div className='space-y-8 md:space-y-10'>
               {[
@@ -291,60 +300,77 @@ const HomePage = () => {
                   title: "Advanced Infrastructure",
                   desc: "Robust, reliable, and built to scale with your business needs.",
                   icon: Cpu,
+                  color: "bg-blue-500/10 text-blue-500",
                 },
                 {
                   title: "Seamless API Integration",
                   desc: "Easy-to-implement developer tools that connect your applications to global telecom networks instantly.",
                   icon: Zap,
+                  color: "bg-primary/10 text-primary",
                 },
                 {
                   title: "Trusted Delivery",
                   desc: "In a world where customer trust is paramount, we ensure your critical messages—like OTPs and transactional alerts—are delivered securely and on time.",
                   icon: Award,
+                  color: "bg-emerald-500/10 text-emerald-500",
                 },
-              ].map((feature) => (
-                <div key={feature.title} className='flex space-x-6'>
-                  <div className='flex-shrink-0 w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary'>
-                    <feature.icon size={28} />
+              ].map((feature, idx) => (
+                <Reveal key={feature.title} delay={idx * 0.1}>
+                  <div className='flex space-x-6 group'>
+                    <div
+                      className={cn(
+                        "flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-[1.25rem] flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 shadow-sm",
+                        feature.color,
+                      )}>
+                      <feature.icon size={28} className='md:hidden' />
+                      <feature.icon size={32} className='hidden md:block' />
+                    </div>
+                    <div className='space-y-2'>
+                      <h3 className='text-lg md:text-xl font-bold text-gray-900 group-hover:text-primary transition-colors'>
+                        {feature.title}
+                      </h3>
+                      <p className='text-sm md:text-base text-gray-600 leading-relaxed'>
+                        {feature.desc}
+                      </p>
+                    </div>
                   </div>
-                  <div className='space-y-2'>
-                    <h3 className='text-lg md:text-xl font-bold text-gray-900'>
-                      {feature.title}
-                    </h3>
-                    <p className='text-sm md:text-base text-gray-600 leading-relaxed'>
-                      {feature.desc}
-                    </p>
-                  </div>
-                </div>
+                </Reveal>
               ))}
             </div>
           </div>
 
-          <div className='relative group'>
-            <div className='absolute -inset-4 bg-primary/20 rounded-[3rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
-            <div className='bg-gray-900 rounded-[2.5rem] p-8 md:p-12 lg:p-20 text-white space-y-10 relative overflow-hidden shadow-2xl'>
-              <div className='absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px]' />
-              <div className='absolute bottom-0 left-0 w-full h-1/2 opacity-20'>
-                <img
-                  src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000'
-                  alt='Global Data Network'
-                  className='w-full h-full object-cover'
-                />
-              </div>
-              <h3 className='text-3xl font-bold leading-tight relative z-10'>
-                Ready to transform your communication?
-              </h3>
-              <p className='text-gray-400 text-lg leading-relaxed relative z-10'>
-                Join dozens of global companies that trust TeleProLink for their
-                SMS and voice connectivity needs.
-              </p>
-              <div className='pt-6 relative z-10'>
-                <Link to='/contact' className='btn-primary w-full sm:w-auto'>
-                  Schedule a Consultation
-                </Link>
+          <Reveal delay={0.3}>
+            <div className='relative group'>
+              <div className='absolute -inset-6 bg-primary/20 rounded-[4rem] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700' />
+              <div className='bg-gray-900 rounded-[3rem] p-8 md:p-12 lg:p-16 text-white space-y-10 relative overflow-hidden shadow-2xl border border-gray-800'>
+                <div className='absolute top-0 right-0 w-80 h-80 bg-primary/20 rounded-full blur-[100px] animate-pulse-slow' />
+                <div className='absolute bottom-0 left-0 w-full h-1/2 opacity-30 group-hover:scale-110 transition-transform duration-1000'>
+                  <img
+                    src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000'
+                    alt='Global Data Network'
+                    className='w-full h-full object-cover'
+                  />
+                  <div className='absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent' />
+                </div>
+                <div className='relative z-10 space-y-6'>
+                  <h3 className='text-3xl md:text-4xl font-bold leading-tight'>
+                    Ready to transform your communication?
+                  </h3>
+                  <p className='text-gray-400 text-lg leading-relaxed'>
+                    Join dozens of global companies that trust TeleProLink for
+                    their SMS and voice connectivity needs.
+                  </p>
+                  <div className='pt-4'>
+                    <Link
+                      to='/contact'
+                      className='btn-primary w-full sm:w-auto hover:scale-105 transition-transform'>
+                      Schedule a Consultation
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
