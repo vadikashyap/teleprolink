@@ -68,7 +68,46 @@
     animation: float 6s ease-in-out infinite;
   }
 
+  @keyframes beat {
+    from {
+      transform: scale(0.9);
+    }
+    to {
+      transform: scale(1.3);
+    }
+  }
+
+  .animate-beat {
+    animation: beat 4s infinite alternate;
+  }
+
   .animate-pulse-slow {
-    animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation: pulse-slow 12s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes rotate-right-left {
+    0% {
+      transform: rotate(0deg);
+      animation-timing-function: ease-out;
+    }
+    25% {
+      transform: rotate(720deg);
+      animation-timing-function: ease-in;
+    }
+    50% {
+      transform: rotate(0deg);
+      animation-timing-function: ease-out;
+    }
+    75% {
+      transform: rotate(-720deg);
+      animation-timing-function: ease-in;
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .animate-rotate-custom {
+    animation: rotate-right-left 15s linear infinite;
   }
 }

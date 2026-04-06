@@ -79,7 +79,7 @@ const Navbar = () => {
             <Link
               to='/contact'
               className='btn-primary py-2 px-8 shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 transition-all'>
-              Book a Demo
+              Book Appointment
             </Link>
           </div>
 
@@ -114,7 +114,7 @@ const Navbar = () => {
               to='/contact'
               className='btn-primary w-full text-center py-4 text-lg shadow-primary/20'
               onClick={() => setIsOpen(false)}>
-              Book a Demo
+              Book Appointment
             </Link>
           </div>
         </div>
