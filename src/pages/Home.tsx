@@ -29,6 +29,11 @@ import {
   Award,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import audioPlaying from "../assets/lottiefiles/audio-playing.lottie";
+import communicationLottie from "../assets/lottiefiles/Communication.lottie";
+// @ts-ignore
+import contactLottie from "../assets/lottiefiles/contect.lottie";
 
 const HomePage = () => {
   return (
@@ -236,11 +241,9 @@ const HomePage = () => {
           <div className='relative'>
             <div className='flex items-center'>
               <Reveal>
-                <img
-                  src={flashCallIcon}
-                  alt=''
-                  className='w-full h-[120px] md:h-[220px] 2xl:h-[320px]'
-                />
+                <div className='w-[150px] md:w-[250px] 2xl:w-[350px]'>
+                  <DotLottieReact src={audioPlaying} loop autoplay />
+                </div>
               </Reveal>
               {/* Vertical Line */}
               <div className='w-1 h-48 bg-primary opacity-40 ml-4 rounded-full' />
@@ -442,11 +445,14 @@ const HomePage = () => {
               </div>
               <div className='order-1 lg:order-2 flex justify-center'>
                 <Reveal direction='left'>
-                  <img
+                  {/* <img
                     src={whyChoose1}
                     alt='WhyChoose-1'
                     className='w-full max-w-lg h-auto object-contain'
-                  />
+                  /> */}
+                  <div className='w-full' style={{ transform: "scale(1.6)" }}>
+                    <DotLottieReact src={contactLottie} loop autoplay />
+                  </div>
                 </Reveal>
               </div>
             </div>
@@ -530,14 +536,15 @@ const HomePage = () => {
                       <Link
                         to='/contact'
                         className='btn-primary w-full sm:w-auto hover:scale-105 transition-transform inline-block text-center'>
-                        Schedule a Consultation
+                        Book Appointment
                       </Link>
                     </div>
                   </div>
                   <div className='w-full md:w-1/2 relative h-64 md:h-80 rounded-[2rem] overflow-hidden group-hover:scale-105 transition-transform duration-1000'>
-                    <img
-                      src={joinImg}
-                      alt='Join TeleProLink'
+                    <DotLottieReact
+                      src={communicationLottie}
+                      loop
+                      autoplay
                       className='w-full h-full'
                     />
                     <div className='absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60' />

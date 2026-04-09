@@ -7,12 +7,14 @@ import {
   Send,
   MessageSquare,
   ArrowRight,
-  ChevronDown,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import SEO from "../components/SEO";
 import Reveal from "../components/Reveal";
-import { Loader2, CheckCircle } from "lucide-react";
+import { Loader2, CheckCircle, ChevronDown } from "lucide-react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+// @ts-ignore
+import contactLottie from "../assets/lottiefiles/contect.lottie";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -38,9 +40,9 @@ const ContactPage = () => {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "e6269acf-dd9b-4bdc-a02a-d485b435b965", // User needs to replace this
+          access_key: " ", // User needs to replace this
           ...formData,
-          subject: `New Contact Form Submission from ${formData.name}`,
+          subject: `Contact Form Submission from ${formData.name}`,
         }),
       });
 
@@ -80,22 +82,32 @@ const ContactPage = () => {
         title='Contact Us | Connect with TeleProLink'
         description='Contact TeleProLink for high-quality SMS and voice solutions. Headquartered in Central, Hong Kong, our team is ready to power your communication strategy.'
       />
-      {/* Header Section */}
       <section className='container-wide'>
-        <div className='max-w-3xl space-y-8'>
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}>
-            <h1 className='heading-1 mb-8'>
-              Let's <span className='text-primary'>Connect</span> and Power Your
-              Communication Strategy.
-            </h1>
-            <p className='text-xl text-gray-600 leading-relaxed'>
-              Ready to elevate your customer engagement? Our experts are here to
-              help you integrate seamless SMS and Voice solutions.
-            </p>
-          </motion.div>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+          <div className='space-y-8'>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}>
+              <h1 className='heading-1 mb-8'>
+                Let's <span className='text-primary'>Connect</span> and Power
+                Your Communication Strategy.
+              </h1>
+              <p className='text-xl text-gray-600 leading-relaxed'>
+                Ready to elevate your customer engagement? Our experts are here
+                to help you integrate seamless SMS and Voice solutions.
+              </p>
+            </motion.div>
+          </div>
+          <div className='flex justify-center lg:justify-end'>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              className='w-full'>
+              <DotLottieReact src={contactLottie} loop autoplay />
+            </motion.div>
+          </div>
         </div>
       </section>
 

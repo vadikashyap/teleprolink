@@ -7,6 +7,7 @@ import {
   Linkedin,
   X,
   Globe,
+  Instagram,
   MessageSquare,
 } from "lucide-react";
 import tplRoundLogo from "../assets/tpl-round-logo.svg";
@@ -45,6 +46,14 @@ const Footer = () => {
                 rel='noopener noreferrer'
                 className='p-2 bg-gray-800 rounded-full hover:bg-primary transition-colors'>
                 <X size={20} />
+              </a>
+
+              <a
+                href=''
+                target='_blank'
+                rel='noopener noreferrer'
+                className='p-2 bg-gray-800 rounded-full hover:bg-primary transition-colors'>
+                <Instagram size={20} />
               </a>
             </div>
           </div>
@@ -145,12 +154,6 @@ const Footer = () => {
       </div>
 
       <div className='container-wide pt-10 border-t border-gray-800 flex flex-col items-center text-center space-y-6'>
-        <p className='text-gray-400 leading-relaxed max-w-2xl'>
-          TeleProLink is your trusted startup telecom partner headquartered in
-          Hong Kong. We provide powerful, high-quality SMS and crystal-clear
-          voice solutions designed to help businesses connect, engage, and grow
-          globally.
-        </p>
         <div className='w-full flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm'>
           <p>© {new Date().getFullYear()} TeleProLink. All rights reserved.</p>
           <div className='flex space-x-6 mt-4 md:mt-0'>
