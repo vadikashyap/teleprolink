@@ -15,6 +15,8 @@ import bg1 from "../assets/bg-1.png";
 import Reveal from "../components/Reveal";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import audioPlaying from "../assets/lottiefiles/audio-playing.lottie";
+import messageSend from "../assets/lottiefiles/message-send.lottie";
+import communicationLottie from "../assets/lottiefiles/Communication.lottie";
 
 const ServicesPage = () => {
   const smsServices = [
@@ -99,7 +101,7 @@ const ServicesPage = () => {
       <section className='bg-gray-50 py-16 mb-0 relative overflow-hidden'>
         <div className='container-wide relative z-10'>
           <Reveal direction='left'>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 mb-12 md:mb-20 items-end'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-end'>
               <div className='space-y-6'>
                 <span className='text-primary font-bold tracking-widest uppercase text-sm'>
                   Communication
@@ -113,15 +115,80 @@ const ServicesPage = () => {
             </div>
           </Reveal>
 
+          <Reveal direction='down' height='100%'>
+            <div className=''>
+              <p className='text-lg text-gray-600 mt-2'>
+                Global Connectivity provides businesses with seamless, reliable,
+                and scalable communication infrastructure to operate efficiently
+                across international markets. Designed to support worldwide
+                operations, our global connectivity solutions ensure
+                uninterrupted communication, consistent performance, and secure
+                data transmission across regions and networks.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className='mt-4 mb-16'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center'>
+              <Reveal direction='left'>
+                <div className=''>
+                  <p className='text-lg text-gray-600 mb-4 text-justify'>
+                    With support for international messaging, crossborder voice
+                    connectivity, and multiregion network access, Global
+                    Connectivity helps organizations maintain a unified
+                    communication experience for customers and teams around the
+                    world. Built for high availability and low latency, the
+                    solution enables businesses to deliver messages, calls, and
+                    verification services with speed and reliability—regardless
+                    of location.
+                  </p>
+
+                  <p className='text-lg text-gray-600 mb-4 text-justify'>
+                    Whether expanding into new markets or managing global
+                    customer engagement, enterprise global
+                    connectivity simplifies communication complexity while
+                    ensuring compliance, performance, and scalability. Ideal
+                    for multinational enterprises, fintech platforms, e-commerce
+                    businesses, and global service providers, Global
+                    Connectivity empowers organizations to grow globally while
+                    staying reliably connected.
+                  </p>
+                </div>
+              </Reveal>
+              <Reveal
+                direction='right'
+                height='100%'
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}>
+                <div className='space-y-6'>
+                  <div className='w-full' style={{ transform: "scale(1.4)" }}>
+                    <DotLottieReact src={messageSend} loop autoplay />
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+
           {/* Decorative Flash Call Elements on Left */}
-          <div className='absolute right-[-30px] -top-[8%] w-[300px] md:w-[450px] pointer-events-none -z-1 flex flex-col items-end'>
+          <div className='absolute right-[-30px] top-0 right-[5%] pointer-events-none -z-1 flex flex-col items-end'>
             <div className='relative'>
               <div className='flex items-center'>
-                <Reveal>
-                  <div className='w-[150px] md:w-[250px] 2xl:w-[350px]'>
-                    <DotLottieReact src={audioPlaying} loop autoplay />
-                  </div>
-                </Reveal>
+                {/* Animated SMS Icon */}
+                <motion.div
+                  animate={{
+                    scale: [0.7, 1.6, 0.7],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  className='text-primary opacity-60 ml-4 hidden md:block'>
+                  <MessageSquare size={64} strokeWidth={1.5} />
+                </motion.div>
               </div>
             </div>
           </div>
@@ -151,42 +218,78 @@ const ServicesPage = () => {
       </section>
 
       {/* Voice Solutions */}
-      <section className='container-wide py-16'>
-        <Reveal direction='right'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 mb-12 md:mb-20 items-end'>
-            <div className='space-y-6'>
-              <span className='text-primary font-bold tracking-widest uppercase text-sm'>
-                Connectivity
-              </span>
-              <h2 className='heading-2'>Premium Voice Solutions</h2>
-              <p className='text-lg text-gray-600'>
-                Deliver crystal-clear voice communication with our premium
-                global network.
-              </p>
-            </div>
-          </div>
-        </Reveal>
-
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8'>
-          {voiceServices.map((service, idx) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              viewport={{ once: true }}
-              className='bg-gray-900 p-6 md:p-8 lg:p-10 rounded-3xl text-white hover:bg-gray-800 transition-all hover:-translate-y-1 group border border-white/5'>
-              <div className='w-14 h-14 md:w-16 md:h-16 bg-white/10 rounded-2xl flex items-center justify-center text-primary mb-6 md:mb-8 group-hover:bg-primary group-hover:text-white transition-colors'>
-                <service.icon size={32} />
+      <section className='bg-white py-16 mb-0 relative overflow-hidden'>
+        <div className='container-wide relative z-10'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 mb-12 md:mb-20'>
+            <Reveal direction='left'>
+              <div className='space-y-8'>
+                <div className='space-y-6'>
+                  <span className='text-primary font-bold tracking-widest uppercase text-sm'>
+                    Connectivity
+                  </span>
+                  <h2 className='heading-2'>Premium Voice Solutions</h2>
+                  <div className='space-y-4'>
+                    <p className='text-lg text-gray-700 leading-relaxed'>
+                      Voice Solutions provide a dependable and scalable way for
+                      businesses to manage voice communication with customers,
+                      teams, and partners. From inbound and outbound calling to
+                      automated voice interactions, the solution helps
+                      organizations improve responsiveness, streamline
+                      operations, and maintain a consistent communication
+                      experience across channels.
+                    </p>
+                    <p className='text-lg text-gray-700 leading-relaxed'>
+                      Whether it’s supporting customer service calls, enabling
+                      automated voice notifications, or handling high call
+                      volumes with intelligent routing, Voice Solutions are
+                      designed to deliver clear call quality and efficient call
+                      handling. With business-focused features such as call
+                      flows, IVR-style automation, and centralized management,
+                      organizations can reduce manual effort while improving
+                      service speed and customer satisfaction.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <h3 className='text-xl md:text-2xl font-bold mb-4'>
-                {service.title}
-              </h3>
-              <p className='text-base md:text-lg text-gray-400 leading-relaxed'>
-                {service.desc}
-              </p>
-            </motion.div>
-          ))}
+            </Reveal>
+
+            <Reveal
+              direction='right'
+              height='100%'
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}>
+              <div className='relative'>
+                <div className='w-full' style={{ transform: "scale(1.3)" }}>
+                  <DotLottieReact src={communicationLottie} loop autoplay />
+                </div>
+              </div>
+            </Reveal>
+          </div>
+
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8'>
+            {voiceServices.map((service, idx) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                viewport={{ once: true }}
+                className='bg-gray-900 p-6 md:p-8 lg:p-10 rounded-3xl text-white hover:bg-gray-800 transition-all hover:-translate-y-1 group border border-white/5'>
+                <div className='w-14 h-14 md:w-16 md:h-16 bg-white/10 rounded-2xl flex items-center justify-center text-primary mb-6 md:mb-8 group-hover:bg-primary group-hover:text-white transition-colors'>
+                  <service.icon size={32} />
+                </div>
+                <h3 className='text-xl md:text-2xl font-bold mb-4'>
+                  {service.title}
+                </h3>
+                <p className='text-base md:text-lg text-gray-400 leading-relaxed'>
+                  {service.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
