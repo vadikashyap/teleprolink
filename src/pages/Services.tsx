@@ -13,6 +13,8 @@ import { motion } from "framer-motion";
 import SEO from "../components/SEO";
 import bg1 from "../assets/bg-1.png";
 import Reveal from "../components/Reveal";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import audioPlaying from "../assets/lottiefiles/audio-playing.lottie";
 
 const ServicesPage = () => {
   const smsServices = [
@@ -94,8 +96,8 @@ const ServicesPage = () => {
       </section>
 
       {/* SMS Solutions */}
-      <section className='bg-gray-50 py-16 mb-0'>
-        <div className='container-wide'>
+      <section className='bg-gray-50 py-16 mb-0 relative overflow-hidden'>
+        <div className='container-wide relative z-10'>
           <Reveal direction='left'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 mb-12 md:mb-20 items-end'>
               <div className='space-y-6'>
@@ -110,6 +112,19 @@ const ServicesPage = () => {
               </div>
             </div>
           </Reveal>
+
+          {/* Decorative Flash Call Elements on Left */}
+          <div className='absolute right-[-30px] -top-[8%] w-[300px] md:w-[450px] pointer-events-none -z-1 flex flex-col items-end'>
+            <div className='relative'>
+              <div className='flex items-center'>
+                <Reveal>
+                  <div className='w-[150px] md:w-[250px] 2xl:w-[350px]'>
+                    <DotLottieReact src={audioPlaying} loop autoplay />
+                  </div>
+                </Reveal>
+              </div>
+            </div>
+          </div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8'>
             {smsServices.map((service, idx) => (
