@@ -8,6 +8,12 @@ import {
   Globe2,
   Zap,
   ArrowRight,
+  ShieldCheck,
+  Lock,
+  Fingerprint,
+  ShieldAlert,
+  Globe,
+  Network,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import SEO from "../components/SEO";
@@ -17,6 +23,8 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import audioPlaying from "../assets/lottiefiles/audio-playing.lottie";
 import messageSend from "../assets/lottiefiles/message-send.lottie";
 import communicationLottie from "../assets/lottiefiles/Communication.lottie";
+import OPT from "../assets/lottiefiles/VerificationCode.lottie";
+import radio from "../assets/lottiefiles/radio.lottie";
 
 const ServicesPage = () => {
   const smsServices = [
@@ -60,11 +68,47 @@ const ServicesPage = () => {
     },
   ];
 
+  const otpServices = [
+    {
+      title: "2FA & MFA",
+      desc: "Implement two-factor and multi-factor authentication to strengthen identity verification.",
+      icon: ShieldCheck,
+    },
+    {
+      title: "Voice OTP",
+      desc: "Reliable voice-based one-time passcodes for enhanced accessibility and security.",
+      icon: PhoneIncoming,
+    },
+    {
+      title: "Real-Time Validation",
+      desc: "Instant verification of user identities to prevent fraud and unauthorized access.",
+      icon: Lock,
+    },
+  ];
+
+  const globalServices = [
+    {
+      title: "International Messaging",
+      desc: "Seamlessly send and receive messages across international borders with high reliability.",
+      icon: MessageSquare,
+    },
+    {
+      title: "Cross-Border Voice",
+      desc: "Connect globally with our high-quality cross-border voice connectivity solutions.",
+      icon: PhoneIncoming,
+    },
+    {
+      title: "Multi-Region Access",
+      desc: "Access communication infrastructure across multiple regions with low latency.",
+      icon: Network,
+    },
+  ];
+
   return (
     <div className='space-y-16 md:space-y-24 lg:space-y-32'>
       <SEO
-        title='Our Services | A2P SMS & Voice Solutions'
-        description="Explore TeleProLink's high-quality SMS solutions including A2P, Bulk SMS, OTP services, and premium voice connectivity for global businesses."
+        title='Our Services | A2P SMS, Voice, OTP & Global Connectivity'
+        description="Explore TeleProLink's high-quality communication solutions: A2P SMS, Bulk Messaging, Premium Voice, secure OTP Security, and seamless Global Connectivity."
       />
       {/* Header */}
       <section className='relative overflow-hidden bg-gray-50 mb-0'>
@@ -98,7 +142,9 @@ const ServicesPage = () => {
       </section>
 
       {/* SMS Solutions */}
-      <section className='bg-gray-50 py-16 mb-0 relative overflow-hidden'>
+      <section
+        id='sms'
+        className='bg-gray-50 py-16 mb-0 relative overflow-hidden'>
         <div className='container-wide relative z-10'>
           <Reveal direction='left'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-end'>
@@ -218,7 +264,9 @@ const ServicesPage = () => {
       </section>
 
       {/* Voice Solutions */}
-      <section className='bg-white py-16 mb-0 relative overflow-hidden'>
+      <section
+        id='voice'
+        className='bg-white py-16 mb-0 relative overflow-hidden'>
         <div className='container-wide relative z-10'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 mb-12 md:mb-20'>
             <Reveal direction='left'>
@@ -285,6 +333,280 @@ const ServicesPage = () => {
                   {service.title}
                 </h3>
                 <p className='text-base md:text-lg text-gray-400 leading-relaxed'>
+                  {service.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* OTP Security */}
+      <section
+        id='otp'
+        className='bg-[#0a0a0c] py-24 mb-0 relative overflow-hidden'>
+        {/* Decorative Security Elements */}
+        <div className='absolute inset-0 opacity-10 pointer-events-none'>
+          <div className='absolute top-1/4 left-10 w-64 h-64 bg-primary rounded-full blur-[120px]' />
+          <div className='absolute bottom-1/4 right-10 w-64 h-64 bg-primary rounded-full blur-[120px]' />
+          <div
+            className='absolute inset-0'
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0)",
+              backgroundSize: "40px 40px",
+            }}
+          />
+        </div>
+
+        <div className='container-wide relative z-10'>
+          <div className='flex flex-col lg:flex-row gap-12 md:gap-16 items-center mb-20'>
+            <Reveal direction='left' width='100%'>
+              <div className='space-y-8 flex-1'>
+                <div className='space-y-6'>
+                  <div className='inline-flex items-center space-x-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full'>
+                    <ShieldCheck size={16} className='text-primary' />
+                    <span className='text-primary font-bold tracking-widest uppercase text-xs'>
+                      Identity Verification
+                    </span>
+                  </div>
+                  <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight'>
+                    Advanced <span className='text-primary'>OTP Security</span>{" "}
+                    Infrastructure
+                  </h2>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+          <div className='flex flex-col lg:flex-row gap-12 md:gap-16 items-center mb-20'>
+            <Reveal direction='left' width='100%'>
+              <div className='space-y-8 flex-1'>
+                <div className='space-y-6'>
+                  <div className='space-y-6'>
+                    <p className='text-xl text-gray-400 leading-relaxed text-justify'>
+                      OTP Security provides a robust and secure authentication
+                      solution that helps businesses safeguard user access,
+                      digital transactions, and sensitive operations. By using
+                      One-Time Password (OTP) authentication, organizations can
+                      verify user identities in real time and significantly
+                      reduce the risk of unauthorized access and fraud.
+                    </p>
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                      <div className='flex items-start space-x-3 text-gray-300'>
+                        <div className='mt-1 bg-primary/20 p-1 rounded-md'>
+                          <Zap size={14} className='text-primary' />
+                        </div>
+                        <p className='text-sm'>Real-time Identity Validation</p>
+                      </div>
+                      <div className='flex items-start space-x-3 text-gray-300'>
+                        <div className='mt-1 bg-primary/20 p-1 rounded-md'>
+                          <Zap size={14} className='text-primary' />
+                        </div>
+                        <p className='text-sm'>Multi-Channel OTP Delivery</p>
+                      </div>
+                      <div className='flex items-start space-x-3 text-gray-300'>
+                        <div className='mt-1 bg-primary/20 p-1 rounded-md'>
+                          <Zap size={14} className='text-primary' />
+                        </div>
+                        <p className='text-sm'>Fraud Risk Mitigation</p>
+                      </div>
+                      <div className='flex items-start space-x-3 text-gray-300'>
+                        <div className='mt-1 bg-primary/20 p-1 rounded-md'>
+                          <Zap size={14} className='text-primary' />
+                        </div>
+                        <p className='text-sm'>Scalable Global Access</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+
+            <Reveal
+              direction='right'
+              height='100%'
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flex: "0 0 40%",
+              }}>
+              <div className='relative group'>
+                <div className='absolute inset-0 bg-primary/20 rounded-full blur-3xl group-hover:bg-primary/30 transition-all duration-500' />
+                <div
+                  className='relative w-full'
+                  style={{ transform: "scale(1.4)" }}>
+                  <DotLottieReact src={OPT} loop autoplay />
+                </div>
+              </div>
+            </Reveal>
+          </div>
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            {otpServices.map((service, idx) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: idx * 0.15 }}
+                viewport={{ once: true }}
+                className='relative bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-[2.5rem] group hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 overflow-hidden'>
+                <div className='absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-10 -mt-10 group-hover:bg-primary/10 transition-all duration-500' />
+
+                <div className='w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center text-white mb-8 shadow-lg shadow-primary/20'>
+                  <service.icon size={32} />
+                </div>
+                <h3 className='text-2xl font-bold mb-4 text-white group-hover:text-primary transition-colors'>
+                  {service.title}
+                </h3>
+                <p className='text-lg text-gray-400 leading-relaxed'>
+                  {service.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className='mt-20 p-12 bg-gradient-to-r from-primary/20 to-transparent border border-primary/20 rounded-[3rem] relative overflow-hidden'>
+            <div className='absolute top-5 right-0 p-8 opacity-70'>
+              <ShieldAlert size={120} className='text-white' />
+            </div>
+            <div className='relative z-10 max-w-3xl'>
+              <h4 className='text-2xl font-bold text-white mb-4'>
+                Compliance & Trust
+              </h4>
+              <p className='text-lg text-gray-400'>
+                Ideal for banking and financial services, e-commerce platforms,
+                enterprise applications, and customer onboarding, OTP Security
+                helps businesses enhance security, meet compliance requirements,
+                and build user trust.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Global Connectivity */}
+      <section
+        id='global'
+        className='bg-white py-24 mb-0 relative overflow-hidden'>
+        {/* World Map Background Pattern */}
+        <div className='absolute inset-0 opacity-[0.03] pointer-events-none flex items-center justify-center'>
+          <Globe size={800} strokeWidth={0.5} />
+        </div>
+
+        <div className='container-wide relative z-10'>
+          <div className='flex flex-col items-center text-center max-w-4xl mx-auto mb-10 space-y-6'>
+            <Reveal direction='down'>
+              <span className='text-primary font-bold tracking-widest uppercase text-sm bg-primary/5 px-6 py-2 rounded-full'>
+                Global Infrastructure
+              </span>
+            </Reveal>
+            <Reveal direction='down' delay={0.2}>
+              <h2 className='text-4xl md:text-6xl font-bold text-gray-900'>
+                Connecting Your Business to the{" "}
+                <span className='text-primary'>Whole World</span>
+              </h2>
+            </Reveal>
+            <Reveal direction='down' delay={0.4}>
+              <p className='text-xl text-gray-600 leading-relaxed'>
+                Seamless, reliable, and scalable communication infrastructure
+                designed to support worldwide operations across international
+                markets.
+              </p>
+            </Reveal>
+          </div>
+
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24'>
+            <div className='order-2 lg:order-1'>
+              <Reveal direction='left'>
+                <div className='space-y-10'>
+                  <div className=''>
+                    <div className='flex items-start gap-6 p-6 rounded-3xl hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100'>
+                      <div className='w-14 h-14 flex-shrink-0 bg-primary/10 rounded-2xl flex items-center justify-center text-primary'>
+                        <Globe size={28} />
+                      </div>
+                      <div className='space-y-2'>
+                        <h4 className='text-xl font-bold text-gray-900'>
+                          Unified Experience
+                        </h4>
+                        <p className='text-gray-600 leading-relaxed'>
+                          Maintain a unified communication experience for
+                          customers and teams around the world with multi-region
+                          network access.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className='flex items-start gap-6 p-6 rounded-3xl hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100'>
+                      <div className='w-14 h-14 flex-shrink-0 bg-primary/10 rounded-2xl flex items-center justify-center text-primary'>
+                        <Zap size={28} />
+                      </div>
+                      <div className='space-y-2'>
+                        <h4 className='text-xl font-bold text-gray-900'>
+                          High Availability
+                        </h4>
+                        <p className='text-gray-600 leading-relaxed'>
+                          Built for low latency and high reliability, ensuring
+                          messages and calls reach their destination regardless
+                          of location.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className='flex items-start gap-6 p-6 rounded-3xl hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100'>
+                      <div className='w-14 h-14 flex-shrink-0 bg-primary/10 rounded-2xl flex items-center justify-center text-primary'>
+                        <ShieldCheck size={28} />
+                      </div>
+                      <div className='space-y-2'>
+                        <h4 className='text-xl font-bold text-gray-900'>
+                          Global Compliance
+                        </h4>
+                        <p className='text-gray-600 leading-relaxed'>
+                          Simplify communication complexity while ensuring
+                          compliance, performance, and scalability across all
+                          regions.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+
+            <div className='order-1 lg:order-2 relative h-full'>
+              <Reveal
+                direction='right'
+                height='100%'
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}>
+                <div className='relative'>
+                  <div className='w-full' style={{ transform: "scale(1.4)" }}>
+                    <DotLottieReact src={radio} loop autoplay />
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8'>
+            {globalServices.map((service, idx) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                viewport={{ once: true }}
+                className='bg-gray-50 p-8 md:p-12 rounded-[3rem] text-center group hover:bg-primary transition-all duration-500'>
+                <div className='w-20 h-20 bg-white rounded-3xl flex items-center justify-center text-primary mb-8 mx-auto shadow-sm group-hover:scale-110 transition-transform'>
+                  <service.icon size={36} />
+                </div>
+                <h3 className='text-2xl font-bold mb-4 text-gray-900 group-hover:text-white transition-colors'>
+                  {service.title}
+                </h3>
+                <p className='text-lg text-gray-600 group-hover:text-white/80 transition-colors leading-relaxed'>
                   {service.desc}
                 </p>
               </motion.div>

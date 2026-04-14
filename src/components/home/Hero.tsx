@@ -61,7 +61,9 @@ const Hero = () => {
         </p>
 
         <div className='flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6'>
-          <Link to='/services' className='btn-primary flex items-center group'>
+          <Link
+            to='/services#sms'
+            className='btn-primary flex items-center group'>
             Explore Our Solutions
             <ArrowRight
               className='ml-2 group-hover:translate-x-1 transition-transform'
@@ -95,7 +97,9 @@ const Hero = () => {
 
           <div className='grid grid-cols-2 gap-4 md:gap-8 relative z-10'>
             {/* SMS Solutions */}
-            <div className='aspect-square bg-white/80 backdrop-blur-sm rounded-[2rem] shadow-xl flex flex-col items-center justify-center p-4 md:p-8 border border-white hover:border-primary/30 transition-all duration-500 hover:scale-[1.02] group shadow-primary/5 hover:shadow-primary/10 relative overflow-hidden'>
+            <Link
+              to='/services#sms'
+              className='aspect-square bg-white/80 backdrop-blur-sm rounded-[2rem] shadow-xl flex flex-col items-center justify-center p-4 md:p-8 border border-white hover:border-primary/30 transition-all duration-500 hover:scale-[1.02] group shadow-primary/5 hover:shadow-primary/10 relative overflow-hidden'>
               <div className='flex flex-col items-center justify-center space-y-4 transition-all duration-500 group-hover:opacity-0 group-hover:-translate-y-4'>
                 <div className='w-14 h-14 md:w-20 md:h-20 bg-primary/5 rounded-2xl flex items-center justify-center text-primary transform transition-all duration-500 group-hover:rotate-6'>
                   <MessageCircle size={32} className='md:hidden' />
@@ -117,10 +121,12 @@ const Hero = () => {
                   and high engagement across all mobile devices.
                 </p>
               </div>
-            </div>
+            </Link>
 
             {/* Voice Solutions */}
-            <div className='aspect-square bg-white/80 backdrop-blur-sm rounded-[2rem] shadow-xl flex flex-col items-center justify-center p-4 md:p-8 border border-white hover:border-primary/30 transition-all duration-500 hover:scale-[1.02] group shadow-primary/5 hover:shadow-primary/10 relative overflow-hidden'>
+            <Link
+              to='/services#voice'
+              className='aspect-square bg-white/80 backdrop-blur-sm rounded-[2rem] shadow-xl flex flex-col items-center justify-center p-4 md:p-8 border border-white hover:border-primary/30 transition-all duration-500 hover:scale-[1.02] group shadow-primary/5 hover:shadow-primary/10 relative overflow-hidden'>
               <div className='flex flex-col items-center justify-center space-y-4 transition-all duration-500 group-hover:opacity-0 group-hover:-translate-y-4'>
                 <div className='w-14 h-14 md:w-20 md:h-20 bg-primary/5 rounded-2xl flex items-center justify-center text-primary transform transition-all duration-500 group-hover:-rotate-6'>
                   <PhoneCall size={32} className='md:hidden' />
@@ -143,10 +149,12 @@ const Hero = () => {
                   faster and deliver better customer experiences.
                 </p>
               </div>
-            </div>
+            </Link>
 
             {/* OTP Security */}
-            <div className='aspect-square bg-white/80 backdrop-blur-sm rounded-[2rem] shadow-xl flex flex-col items-center justify-center p-4 md:p-8 border border-white hover:border-primary/30 transition-all duration-500 hover:scale-[1.02] group shadow-primary/5 hover:shadow-primary/10 relative overflow-hidden'>
+            <Link
+              to='/services#otp'
+              className='aspect-square bg-white/80 backdrop-blur-sm rounded-[2rem] shadow-xl flex flex-col items-center justify-center p-4 md:p-8 border border-white hover:border-primary/30 transition-all duration-500 hover:scale-[1.02] group shadow-primary/5 hover:shadow-primary/10 relative overflow-hidden'>
               <div className='flex flex-col items-center justify-center space-y-4 transition-all duration-500 group-hover:opacity-0 group-hover:-translate-y-4'>
                 <div className='w-14 h-14 md:w-20 md:h-20 bg-primary/5 rounded-2xl flex items-center justify-center text-primary transform transition-all duration-500 group-hover:-rotate-6'>
                   <Lock size={32} className='md:hidden' />
@@ -168,10 +176,12 @@ const Hero = () => {
                   sensitive actions with fast and reliable verification.
                 </p>
               </div>
-            </div>
+            </Link>
 
             {/* Global Connectivity */}
-            <div className='aspect-square bg-white/80 backdrop-blur-sm rounded-[2rem] shadow-xl flex flex-col items-center justify-center p-4 md:p-8 border border-white hover:border-primary/30 transition-all duration-500 hover:scale-[1.02] group shadow-primary/5 hover:shadow-primary/10 relative overflow-hidden'>
+            <Link
+              to='/services#global'
+              className='aspect-square bg-white/80 backdrop-blur-sm rounded-[2rem] shadow-xl flex flex-col items-center justify-center p-4 md:p-8 border border-white hover:border-primary/30 transition-all duration-500 hover:scale-[1.02] group shadow-primary/5 hover:shadow-primary/10 relative overflow-hidden'>
               <div className='flex flex-col items-center justify-center space-y-4 transition-all duration-500 group-hover:opacity-0 group-hover:-translate-y-4'>
                 <div className='w-14 h-14 md:w-20 md:h-20 bg-primary/5 rounded-2xl flex items-center justify-center text-primary transform transition-all duration-500 group-hover:rotate-6'>
                   <Globe2 size={32} className='md:hidden' />
@@ -194,7 +204,7 @@ const Hero = () => {
                   high-performance networks.
                 </p>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </motion.div>

@@ -63,39 +63,32 @@ const Footer = () => {
           <h4 className='text-lg font-semibold mb-6'>Our Services</h4>
           <ul className='space-y-4 text-gray-400'>
             <li>
-              <Link
-                to='/services'
+              <a
+                href='/services#sms'
                 className='hover:text-primary transition-colors'>
-                A2P & Bulk SMS
-              </Link>
+                SMS Service
+              </a>
             </li>
             <li>
-              <Link
-                to='/services'
+              <a
+                href='/services#voice'
                 className='hover:text-primary transition-colors'>
-                Transactional Messaging
-              </Link>
+                Voice Service
+              </a>
             </li>
             <li>
-              <Link
-                to='/services'
+              <a
+                href='/services#otp'
                 className='hover:text-primary transition-colors'>
                 OTP Services
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to='/services'
+              <a
+                href='/services#global'
                 className='hover:text-primary transition-colors'>
-                Wholesale SMS Trading
-              </Link>
-            </li>
-            <li>
-              <Link
-                to='/services'
-                className='hover:text-primary transition-colors'>
-                Premium Voice Solutions
-              </Link>
+                Global Connectivity
+              </a>
             </li>
           </ul>
         </div>
@@ -108,13 +101,6 @@ const Footer = () => {
                 to='/about'
                 className='hover:text-primary transition-colors'>
                 About Us
-              </Link>
-            </li>
-            <li>
-              <Link
-                to='/about'
-                className='hover:text-primary transition-colors'>
-                Leadership
               </Link>
             </li>
             <li>

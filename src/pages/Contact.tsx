@@ -113,61 +113,9 @@ const ContactPage = () => {
 
       {/* Contact Content Section */}
       <section className='container-wide'>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20'>
-          {/* Contact Details Column */}
-          <Reveal direction='right'>
-            <div className='space-y-8 md:space-y-12'>
-              <div className='space-y-8 md:space-y-10'>
-                <div className='flex items-start space-x-4 md:space-x-6'>
-                  <div className='w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0'>
-                    <MapPin size={24} className='md:hidden' />
-                    <MapPin size={28} className='hidden md:block' />
-                  </div>
-                  <div className='space-y-1 md:space-y-2'>
-                    <h3 className='text-lg md:text-xl font-bold text-gray-900'>
-                      Headquarters
-                    </h3>
-                    <p className='text-base md:text-lg text-gray-600'>
-                      Central, Hong Kong
-                    </p>
-                  </div>
-                </div>
-
-                <div className='flex items-start space-x-4 md:space-x-6'>
-                  <div className='w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0'>
-                    <Globe size={24} className='md:hidden' />
-                    <Globe size={28} className='hidden md:block' />
-                  </div>
-                  <div className='space-y-1 md:space-y-2'>
-                    <h3 className='text-lg md:text-xl font-bold text-gray-900'>
-                      Website
-                    </h3>
-                    <p className='text-base md:text-lg text-gray-600'>
-                      www.teleprolink.com
-                    </p>
-                  </div>
-                </div>
-
-                <div className='flex items-start space-x-4 md:space-x-6'>
-                  <div className='w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0'>
-                    <Mail size={24} className='md:hidden' />
-                    <Mail size={28} className='hidden md:block' />
-                  </div>
-                  <div className='space-y-1 md:space-y-2'>
-                    <h3 className='text-lg md:text-xl font-bold text-gray-900'>
-                      Direct Email
-                    </h3>
-                    <p className='text-base md:text-lg text-gray-600 hover:text-primary transition-colors cursor-pointer'>
-                      sales@teleprolink.com
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-
+        <div className='max-w-4xl mx-auto'>
           {/* Form Column */}
-          <Reveal direction='left' delay={0.4}>
+          <Reveal direction='up' delay={0.4}>
             <div className='bg-white rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-12 lg:p-16 border border-gray-100 relative overflow-hidden'>
               <div className='absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl' />
 
