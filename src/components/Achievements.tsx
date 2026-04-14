@@ -2,16 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
   Globe,
-  PhoneCall,
+  Zap,
   MessageSquare,
   Building2,
-  ArrowRight,
   Mic,
   MessageCircle,
 } from "lucide-react";
-import { Link } from "react-router-dom";
 import Reveal from "./Reveal";
-import serviceLeftLayer from "../assets/service-leftlayer.png";
 
 const Achievements = () => {
   const stats = [
@@ -23,9 +20,9 @@ const Achievements = () => {
       position: "translate-y-[-20px] lg:translate-y-[-40px]",
     },
     {
-      number: "300M+",
-      label: "Minutes Delivered Worldwide",
-      icon: PhoneCall,
+      number: "99.9%",
+      label: "Uptime",
+      icon: Zap,
       delay: 0.2,
       position: "translate-y-[20px] lg:translate-y-[40px]",
     },
@@ -122,7 +119,7 @@ const Achievements = () => {
                           ease: "linear",
                         }}
                         className='absolute top-[-5%] left-1/2 -translate-x-1/2 w-12 h-12 md:w-14 md:h-14 bg-primary text-white rounded-full shadow-lg shadow-primary/30 flex items-center justify-center pointer-events-auto'>
-                        <PhoneCall size={24} strokeWidth={2.5} />
+                        <Zap size={24} strokeWidth={2.5} />
                       </motion.div>
                     </motion.div>
 
