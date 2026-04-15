@@ -153,24 +153,7 @@ const ServicesPage = () => {
                   Communication
                 </span>
                 <h2 className='heading-2'>High-Quality SMS Solutions</h2>
-                <p className='text-lg text-gray-600'>
-                  Reach your audience wherever they are with our robust SMS
-                  infrastructure.
-                </p>
               </div>
-            </div>
-          </Reveal>
-
-          <Reveal direction='down' height='100%'>
-            <div className=''>
-              <p className='text-lg text-gray-600 mt-2'>
-                Global Connectivity provides businesses with seamless, reliable,
-                and scalable communication infrastructure to operate efficiently
-                across international markets. Designed to support worldwide
-                operations, our global connectivity solutions ensure
-                uninterrupted communication, consistent performance, and secure
-                data transmission across regions and networks.
-              </p>
             </div>
           </Reveal>
 
@@ -178,26 +161,26 @@ const ServicesPage = () => {
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center'>
               <Reveal direction='left'>
                 <div className=''>
-                  <p className='text-lg text-gray-600 mb-4 text-justify'>
-                    With support for international messaging, crossborder voice
-                    connectivity, and multiregion network access, Global
-                    Connectivity helps organizations maintain a unified
-                    communication experience for customers and teams around the
-                    world. Built for high availability and low latency, the
-                    solution enables businesses to deliver messages, calls, and
-                    verification services with speed and reliability—regardless
-                    of location.
+                  <p className='text-lg text-gray-600 mb-4 '>
+                    Reach your audience wherever they are with our robust SMS
+                    infrastructure.
+                  </p>
+                  <p className='text-lg text-gray-600 mb-4 '>
+                    Global Connectivity provides businesses with seamless and
+                    scalable communication infrastructure for international
+                    markets. It ensures reliable performance and secure data
+                    transmission across regions. With support for messaging and
+                    cross-border voice connectivity, businesses can maintain a
+                    unified global experience.
                   </p>
 
-                  <p className='text-lg text-gray-600 mb-4 text-justify'>
-                    Whether expanding into new markets or managing global
-                    customer engagement, enterprise global
-                    connectivity simplifies communication complexity while
-                    ensuring compliance, performance, and scalability. Ideal
-                    for multinational enterprises, fintech platforms, e-commerce
-                    businesses, and global service providers, Global
-                    Connectivity empowers organizations to grow globally while
-                    staying reliably connected.
+                  <p className='text-lg text-gray-600 mb-4 '>
+                    Global Connectivity provides businesses with seamless and
+                    scalable communication infrastructure for international
+                    markets. It ensures reliable performance and secure data
+                    transmission across regions. With support for messaging and
+                    cross-border voice connectivity, businesses can maintain a
+                    unified global experience.
                   </p>
                 </div>
               </Reveal>
@@ -215,27 +198,6 @@ const ServicesPage = () => {
                   </div>
                 </div>
               </Reveal>
-            </div>
-          </div>
-
-          {/* Decorative Flash Call Elements on Left */}
-          <div className='absolute right-[-30px] top-0 right-[5%] pointer-events-none -z-1 flex flex-col items-end'>
-            <div className='relative'>
-              <div className='flex items-center'>
-                {/* Animated SMS Icon */}
-                <motion.div
-                  animate={{
-                    scale: [0.7, 1.6, 0.7],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className='text-primary opacity-60 ml-4 hidden md:block'>
-                  <MessageSquare size={64} strokeWidth={1.5} />
-                </motion.div>
-              </div>
             </div>
           </div>
 
@@ -292,9 +254,9 @@ const ServicesPage = () => {
                       volumes with intelligent routing, Voice Solutions are
                       designed to deliver clear call quality and efficient call
                       handling. With business-focused features such as call
-                      flows, IVR-style automation, and centralized management,
-                      organizations can reduce manual effort while improving
-                      service speed and customer satisfaction.
+                      flows, and centralized management, organizations can
+                      reduce manual effort while improving service speed and
+                      customer satisfaction.
                     </p>
                   </div>
                 </div>

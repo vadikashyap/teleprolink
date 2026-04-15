@@ -54,9 +54,9 @@ const Hero = () => {
         </h1>
 
         <p className='text-xl text-gray-600 leading-relaxed max-w-xl'>
-          TeleProLink is your trusted startup telecom partner headquartered in
-          Hong Kong. We provide powerful, high-quality SMS and crystal-clear
-          voice solutions designed to help businesses connect, engage, and grow
+          TeleProLink is your trusted telecom partner headquartered in Hong
+          Kong. We provide powerful, high-quality SMS and crystal-clear voice
+          solutions designed to help businesses connect, engage, and grow
           globally.
         </p>
 

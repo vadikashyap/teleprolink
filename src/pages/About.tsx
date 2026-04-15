@@ -43,7 +43,7 @@ const AboutPage = () => {
               backbone of every successful business.
             </h1>
             <p className='text-xl mb-2 text-gray-600 leading-relaxed max-w-xl'>
-              <b>Tekeprolink.com</b> is built on one belief: technology should
+              <b>Teleprolink.com</b> is built on one belief: technology should
               simplify growth, not slow it down. We work with clients who value
               quality, clarity, and dependable outcomes—delivering solutions
               with a practical mindset and a strong focus on results. From
@@ -150,21 +150,21 @@ const AboutPage = () => {
       </section>
 
       {/* Our Vision Section */}
-      <section className='bg-gray-900 py-16 md:py-24 lg:py-32 mb-0'>
+      <section className='bg-gray-50 py-16 md:py-24 lg:py-32 mb-0'>
         <div className='container-wide'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center'>
             <Reveal direction='left'>
-              <div className='relative bg-white/5 rounded-[2.5rem] p-8 md:p-12 lg:p-16 border border-white/10 shadow-xl'>
-                <div className='absolute top-0 left-0 w-32 h-32 bg-white/5 rounded-full blur-3xl' />
+              <div className='relative bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 border border-gray-100 shadow-xl'>
+                <div className='absolute top-0 left-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl' />
                 <div className='flex items-center space-x-6 mb-6'>
                   <div className='w-full' style={{ transform: "scale(1.2)" }}>
                     <DotLottieReact src={visionLottie} loop autoplay />
                   </div>
                 </div>
-                <h3 className='text-2xl font-bold text-white text-center'>
+                <h3 className='text-2xl font-bold text-gray-900 text-center'>
                   Excellence
                 </h3>
-                <p className='text-lg text-gray-400 leading-relaxed text-center'>
+                <p className='text-lg text-gray-600 leading-relaxed text-center'>
                   We strive for excellence in every aspect of our work, from
                   product development to customer support, ensuring the highest
                   standards of quality and reliability.
@@ -173,17 +173,17 @@ const AboutPage = () => {
             </Reveal>
             <Reveal direction='right'>
               <div className='space-y-8'>
-                <div className='inline-flex items-center space-x-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full'>
-                  <TrendingUp size={16} className='text-white' />
-                  <span className='text-white font-bold tracking-widest uppercase text-xs'>
+                <div className='inline-flex items-center space-x-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full'>
+                  <TrendingUp size={16} className='text-primary' />
+                  <span className='text-primary font-bold tracking-widest uppercase text-xs'>
                     Our Vision
                   </span>
                 </div>
-                <h2 className='text-4xl md:text-5xl font-bold text-white leading-tight'>
+                <h2 className='text-4xl md:text-5xl font-bold text-gray-900 leading-tight'>
                   Building Trust with{" "}
                   <span className='text-primary'>Reliable Outcomes</span>
                 </h2>
-                <p className='text-xl text-gray-400 leading-relaxed'>
+                <p className='text-xl text-gray-600 leading-relaxed'>
                   To become a trusted name for clients who want solutions that
                   are reliable, scalable, and built around real outcomes—not
                   empty promises.
