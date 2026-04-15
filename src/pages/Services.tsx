@@ -342,10 +342,9 @@ const ServicesPage = () => {
       </section>
 
       {/* OTP Security */}
-      <section
+      {/* <section
         id='otp'
         className='bg-[#0a0a0c] py-24 mb-0 relative overflow-hidden'>
-        {/* Decorative Security Elements */}
         <div className='absolute inset-0 opacity-10 pointer-events-none'>
           <div className='absolute top-1/4 left-10 w-64 h-64 bg-primary rounded-full blur-[120px]' />
           <div className='absolute bottom-1/4 right-10 w-64 h-64 bg-primary rounded-full blur-[120px]' />
@@ -483,7 +482,7 @@ const ServicesPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Global Connectivity */}
       <section

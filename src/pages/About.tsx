@@ -10,15 +10,22 @@ import {
   ShieldCheck,
   TrendingUp,
   Mail,
+  Lightbulb,
+  Award,
+  PhoneCall,
+  MessageSquare,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import SEO from "../components/SEO";
 import ourStoryImg from "../assets/Our-Story.png";
 import Reveal from "../components/Reveal";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import missionLottie from "../assets/lottiefiles/Communication.lottie";
+import visionLottie from "../assets/lottiefiles/VerificationCode.lottie";
 
 const AboutPage = () => {
   return (
-    <div className='space-y-16 md:space-y-24 lg:space-y-32 py-10 lg:py-20'>
+    <div className='space-y-16 md:space-y-24 lg:space-y-32 pt-10 lg:pt-20'>
       <SEO
         title='About Us | Leadership & Vision'
         description='Learn about TeleProLink, a Hong Kong-based telecom startup led by industry veteran Ashish Dhar with 19 years of experience in global communication.'
@@ -55,7 +62,7 @@ const AboutPage = () => {
       </section>
 
       {/* Trust & Security Content */}
-      <section className='bg-gray-50'>
+      <section className='bg-gray-50 mb-0'>
         <div className='container-wide py-16 mb-0 md:py-24 lg:py-32 border-t border-gray-100'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center'>
             <div className='space-y-8'>
@@ -95,6 +102,127 @@ const AboutPage = () => {
                 experiences they expect.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Mission Section */}
+      <section className='container-wide py-16 md:py-24 lg:py-32 mb-0'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center'>
+          <Reveal direction='left'>
+            <div className='space-y-8'>
+              <div className='inline-flex items-center space-x-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full'>
+                <Target size={16} className='text-primary' />
+                <span className='text-primary font-bold tracking-widest uppercase text-xs'>
+                  Our Mission
+                </span>
+              </div>
+              <h2 className='text-4xl md:text-5xl font-bold text-gray-900 leading-tight'>
+                Driving Growth with{" "}
+                <span className='text-primary'>Dependable Solutions</span>
+              </h2>
+              <p className='text-xl text-gray-600 leading-relaxed'>
+                To deliver dependable, modern solutions that help people and
+                businesses grow with confidence—through quality work, honest
+                communication, and long-term support.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal direction='right'>
+            <div className='relative bg-gradient-to-br from-primary/10 to-transparent rounded-[2.5rem] p-8 md:p-12 lg:p-16 border border-primary/20'>
+              <div className='absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl' />
+              <div className='flex items-center space-x-6 mb-6'>
+                <div className='w-full' style={{ transform: "scale(1.2)" }}>
+                  <DotLottieReact src={missionLottie} loop autoplay />
+                </div>
+              </div>
+              <h3 className='text-2xl font-bold text-gray-900 text-center'>
+                Innovation
+              </h3>
+              <p className='text-lg text-gray-700 leading-relaxed text-center'>
+                We believe in constantly evolving and adopting new technologies
+                to provide cutting-edge solutions that meet the dynamic needs of
+                the global market.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Our Vision Section */}
+      <section className='bg-gray-900 py-16 md:py-24 lg:py-32 mb-0'>
+        <div className='container-wide'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center'>
+            <Reveal direction='left'>
+              <div className='relative bg-white/5 rounded-[2.5rem] p-8 md:p-12 lg:p-16 border border-white/10 shadow-xl'>
+                <div className='absolute top-0 left-0 w-32 h-32 bg-white/5 rounded-full blur-3xl' />
+                <div className='flex items-center space-x-6 mb-6'>
+                  <div className='w-full' style={{ transform: "scale(1.2)" }}>
+                    <DotLottieReact src={visionLottie} loop autoplay />
+                  </div>
+                </div>
+                <h3 className='text-2xl font-bold text-white text-center'>
+                  Excellence
+                </h3>
+                <p className='text-lg text-gray-400 leading-relaxed text-center'>
+                  We strive for excellence in every aspect of our work, from
+                  product development to customer support, ensuring the highest
+                  standards of quality and reliability.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal direction='right'>
+              <div className='space-y-8'>
+                <div className='inline-flex items-center space-x-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full'>
+                  <TrendingUp size={16} className='text-white' />
+                  <span className='text-white font-bold tracking-widest uppercase text-xs'>
+                    Our Vision
+                  </span>
+                </div>
+                <h2 className='text-4xl md:text-5xl font-bold text-white leading-tight'>
+                  Building Trust with{" "}
+                  <span className='text-primary'>Reliable Outcomes</span>
+                </h2>
+                <p className='text-xl text-gray-400 leading-relaxed'>
+                  To become a trusted name for clients who want solutions that
+                  are reliable, scalable, and built around real outcomes—not
+                  empty promises.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Connect Banner Section */}
+      <section className='bg-primary py-24 overflow-hidden relative mb-0'>
+        <div className='absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2' />
+        <div className='container-wide relative z-10 flex flex-col md:flex-row items-center justify-between gap-12 text-white'>
+          <div className='max-w-2xl space-y-6'>
+            <h2 className='text-4xl md:text-5xl font-bold'>
+              Ready to Connect?
+            </h2>
+            <p className='text-xl text-white/90 leading-relaxed'>
+              Whether you have a question, need a quote, or want to explore
+              partnership opportunities, our team is ready to assist you.
+            </p>
+            <div className='flex items-center space-x-6 pt-4'>
+              <div className='flex items-center space-x-2'>
+                <PhoneCall size={24} className='text-white' />
+                <span className='text-lg font-medium'>Voice Solutions</span>
+              </div>
+              <div className='flex items-center space-x-2'>
+                <MessageSquare size={24} className='text-white' />
+                <span className='text-lg font-medium'>SMS Services</span>
+              </div>
+            </div>
+          </div>
+          <div className='flex-shrink-0'>
+            <a
+              href='/contact'
+              className='bg-white text-primary hover:bg-gray-50 px-10 py-5 rounded-full font-bold text-lg shadow-xl transition-all hover:scale-105'>
+              Contact Us Today
+            </a>
           </div>
         </div>
       </section>

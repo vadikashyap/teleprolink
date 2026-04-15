@@ -76,13 +76,13 @@ const Footer = () => {
                 Voice Service
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href='/services#otp'
                 className='hover:text-primary transition-colors'>
                 OTP Services
               </a>
-            </li>
+            </li> */}
             <li>
               <a
                 href='/services#global'
