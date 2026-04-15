@@ -26,7 +26,6 @@ const Navbar = () => {
       subLinks: [
         { name: "SMS Service", path: "/services#sms" },
         { name: "Voice Service", path: "/services#voice" },
-        { name: "OTP Security", path: "/services#otp" },
         { name: "Global Connectivity", path: "/services#global" },
       ],
     },
