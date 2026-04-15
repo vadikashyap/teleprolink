@@ -15,6 +15,9 @@ import { Loader2, CheckCircle, ChevronDown } from "lucide-react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 // @ts-ignore
 import contactLottie from "../assets/lottiefiles/contect.lottie";
+// @ts-ignore
+import contactUsLottie from "../assets/lottiefiles/Contact-US.lottie";
+import upImg from "../assets/up.png";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -112,11 +115,34 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Content Section */}
-      <section className='container-wide'>
-        <div className='max-w-4xl mx-auto'>
-          {/* Form Column */}
-          <Reveal direction='up' delay={0.4}>
-            <div className='bg-white rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-12 lg:p-16 border border-gray-100 relative overflow-hidden'>
+      <section className='container-wide relative'>
+        <div className='absolute -top-24 -left-24 w-64 h-64 bg-primary/5 rounded-full blur-[100px] pointer-events-none' />
+        <div className='absolute -bottom-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-[120px] pointer-events-none' />
+
+        <div className='grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-20 items-start'>
+          {/* Left Column: Contact Info */}
+          <div className='lg:col-span-2 space-y-12'>
+            <div className='space-y-6'>
+              <h2 className='text-3xl md:text-4xl font-bold text-gray-900'>
+                Get in <span className='text-primary'>Touch</span>
+              </h2>
+              <p className='text-lg text-gray-600 leading-relaxed'>
+                Have a specific inquiry or need a custom solution? Our team is
+                ready to discuss how we can help your business grow.
+              </p>
+              <div className='w-full 1 h-[500px]'>
+                <DotLottieReact src={contactUsLottie} loop autoplay />
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Form Column */}
+          <div className='lg:col-span-3'>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className='bg-white rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 border border-gray-100 shadow-xl shadow-gray-100/50 relative overflow-hidden min-h-[600px]'>
               <div className='absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl' />
 
               {status === "success" ? (
@@ -161,8 +187,10 @@ const ContactPage = () => {
                           Select a service
                         </option>
                         <option value='SMS Services'>SMS Services</option>
-                        <option value='OTP Services'>OTP Services</option>
                         <option value='Voice Services'>Voice Services</option>
+                        <option value='Global Connectivity'>
+                          Global Connectivity
+                        </option>
                       </select>
                       <div className='absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400'>
                         <ChevronDown size={20} />
@@ -170,7 +198,7 @@ const ContactPage = () => {
                     </div>
                   </div>
 
-                  {formData.serviceType && (
+                  {formData.serviceType ? (
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -273,16 +301,28 @@ const ContactPage = () => {
                         )}
                       </button>
                     </motion.div>
+                  ) : (
+                    <div className='flex items-center bg-gray-50/70 border border-gray-100 rounded-2xl p-4 md:p-6'>
+                      <img
+                        src={upImg}
+                        alt='Select service type'
+                        className='w-[100px] md:w-[120px] mx-auto md:mx-0'
+                      />
+                      <p className='text-sm md:text-base text-gray-700 leading-relaxed text-center md:text-left'>
+                        Please select a service type (SMS, Voice, or Global) to
+                        proceed with the contact form.
+                      </p>
+                    </div>
                   )}
                 </form>
               )}
-            </div>
-          </Reveal>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Footer Info */}
-      <section className='bg-gray-900 py-16 md:py-24 lg:py-32 text-center text-white relative overflow-hidden'>
+      <section className='bg-gray-900 py-16 md:py-24 lg:py-32 text-center text-white relative overflow-hidden mb-0'>
         <div className='absolute top-0 left-0 w-64 h-64 bg-primary/20 rounded-full blur-[120px]' />
         <div className='container-wide relative z-10 space-y-6 md:space-y-8'>
           <MessageSquare
