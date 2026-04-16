@@ -36,14 +36,14 @@ const Navbar = () => {
     <nav
       className={cn(
         "fixed w-full z-50 transition-all duration-500",
-        isScrolled ? "py-4" : "py-6",
+        isScrolled ? "py-4" : "py-6"
       )}>
       <div
         className={cn(
           "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-500",
           isScrolled
             ? "bg-white/80 backdrop-blur-lg shadow-[0_8px_32px_rgba(0,0,0,0.05)] rounded-[2rem] py-3"
-            : "bg-transparent py-0",
+            : "bg-transparent py-0"
         )}>
         <div className='flex items-center justify-between'>
           <Link
@@ -71,7 +71,7 @@ const Navbar = () => {
                       "text-sm font-semibold transition-all duration-300 hover:text-primary relative flex items-center cursor-default py-2",
                       location.pathname.startsWith(link.path)
                         ? "text-primary"
-                        : "text-gray-600",
+                        : "text-gray-600"
                     )}>
                     {link.name}
                     <ChevronDown
@@ -83,7 +83,7 @@ const Navbar = () => {
                         "absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300",
                         location.pathname.startsWith(link.path)
                           ? "w-full"
-                          : "w-0 group-hover/nav-item:w-full",
+                          : "w-0 group-hover/nav-item:w-full"
                       )}
                     />
 
@@ -97,7 +97,7 @@ const Navbar = () => {
                             "block px-6 py-3 text-sm font-medium hover:bg-gray-50 hover:text-primary transition-colors",
                             location.pathname + location.hash === subLink.path
                               ? "text-primary bg-primary/5"
-                              : "text-gray-600",
+                              : "text-gray-600"
                           )}>
                           {subLink.name}
                         </a>
@@ -111,7 +111,7 @@ const Navbar = () => {
                       "text-sm font-semibold transition-all duration-300 hover:text-primary relative group/nav py-2 block",
                       location.pathname === link.path
                         ? "text-primary"
-                        : "text-gray-600",
+                        : "text-gray-600"
                     )}>
                     {link.name}
                     <span
@@ -119,7 +119,7 @@ const Navbar = () => {
                         "absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300",
                         location.pathname === link.path
                           ? "w-full"
-                          : "w-0 group-hover/nav:w-full",
+                          : "w-0 group-hover/nav:w-full"
                       )}
                     />
                   </Link>
@@ -155,7 +155,7 @@ const Navbar = () => {
                         "text-xl font-bold py-2 border-b border-gray-50 flex items-center justify-between",
                         location.pathname.startsWith(link.path)
                           ? "text-primary"
-                          : "text-gray-600",
+                          : "text-gray-600"
                       )}>
                       {link.name}
                       <ChevronDown size={20} />
@@ -169,7 +169,7 @@ const Navbar = () => {
                             "block text-lg font-semibold transition-colors",
                             location.pathname + location.hash === subLink.path
                               ? "text-primary"
-                              : "text-gray-500",
+                              : "text-gray-500"
                           )}
                           onClick={() => setIsOpen(false)}>
                           {subLink.name}
@@ -184,7 +184,7 @@ const Navbar = () => {
                       "text-xl font-bold py-2 border-b border-gray-50 transition-colors block",
                       location.pathname === link.path
                         ? "text-primary"
-                        : "text-gray-600",
+                        : "text-gray-600"
                     )}
                     onClick={() => setIsOpen(false)}>
                     {link.name}

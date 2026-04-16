@@ -22,6 +22,8 @@ import Reveal from "../components/Reveal";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import missionLottie from "../assets/lottiefiles/Communication.lottie";
 import visionLottie from "../assets/lottiefiles/VerificationCode.lottie";
+import mission from "../assets/mission.png";
+import vision from "../assets/vision.png";
 
 const AboutPage = () => {
   return (
@@ -112,12 +114,12 @@ const AboutPage = () => {
           <Reveal direction='left'>
             <div className='space-y-8'>
               <div className='inline-flex items-center space-x-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full'>
-                <Target size={16} className='text-primary' />
-                <span className='text-primary font-bold tracking-widest uppercase text-xs'>
+                <img src={mission} alt='Mission' className='w-7 h-7' />
+                <span className='text-primary font-bold tracking-widest uppercase text-xl'>
                   Our Mission
                 </span>
               </div>
-              <h2 className='text-4xl md:text-5xl font-bold text-gray-900 leading-tight'>
+              <h2 className='text-3xl md:text-4xl font-bold text-gray-900 leading-tight'>
                 Driving Growth with{" "}
                 <span className='text-primary'>Dependable Solutions</span>
               </h2>
@@ -154,7 +156,7 @@ const AboutPage = () => {
         <div className='container-wide'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center'>
             <Reveal direction='left'>
-              <div className='relative bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 border border-gray-100 shadow-xl'>
+              <div className='relative bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 border border-gray-100'>
                 <div className='absolute top-0 left-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl' />
                 <div className='flex items-center space-x-6 mb-6'>
                   <div className='w-full' style={{ transform: "scale(1.2)" }}>
@@ -174,12 +176,12 @@ const AboutPage = () => {
             <Reveal direction='right'>
               <div className='space-y-8'>
                 <div className='inline-flex items-center space-x-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full'>
-                  <TrendingUp size={16} className='text-primary' />
-                  <span className='text-primary font-bold tracking-widest uppercase text-xs'>
+                  <img src={vision} alt='Mission' className='w-9 h-8' />
+                  <span className='text-primary font-bold tracking-widest uppercase text-xl'>
                     Our Vision
                   </span>
                 </div>
-                <h2 className='text-4xl md:text-5xl font-bold text-gray-900 leading-tight'>
+                <h2 className='text-3xl md:text-4xl font-bold text-gray-900 leading-tight'>
                   Building Trust with{" "}
                   <span className='text-primary'>Reliable Outcomes</span>
                 </h2>
