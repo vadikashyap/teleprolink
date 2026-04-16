@@ -1,16 +1,7 @@
 import React, { useState } from "react";
-import {
-  Mail,
-  MapPin,
-  Globe,
-  Linkedin,
-  Send,
-  MessageSquare,
-  ArrowRight,
-} from "lucide-react";
+import { Send, MessageSquare, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import SEO from "../components/SEO";
-import Reveal from "../components/Reveal";
 import { Loader2, CheckCircle, ChevronDown } from "lucide-react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 // @ts-ignore
@@ -71,7 +62,7 @@ const ContactPage = () => {
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >,
+    >
   ) => {
     setFormData({
       ...formData,

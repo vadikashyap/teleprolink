@@ -20,7 +20,7 @@ const HomePage = () => {
       <section className='w-full bg-gray-100 py-10'>
         <div className='max-w-6xl mx-auto px-4 relative'>
           {/* Left Decorative Lines */}
-          <div className='absolute left-0 top-1/2 -translate-y-1/2 flex items-center gap-2'>
+          <div className='absolute left-10 top-1/2 -translate-y-1/2 z-2 flex items-center gap-2'>
             {/* Line 1 */}
             <div className='w-3 h-20 bg-primary/20 transform -skew-x-12'></div>
 

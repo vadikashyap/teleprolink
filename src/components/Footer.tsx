@@ -34,14 +34,14 @@ const Footer = () => {
           <div className='flex flex-col items-center md:items-start space-y-6'>
             <div className='flex space-x-4'>
               <a
-                href=''
+                href='https://www.linkedin.com/company/teleprolink-limited/'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='p-2 bg-gray-800 rounded-full hover:bg-primary transition-colors'>
                 <Linkedin size={20} />
               </a>
               <a
-                href=''
+                href='https://x.com/voice_sms_did'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='p-2 bg-gray-800 rounded-full hover:bg-primary transition-colors'>
@@ -49,7 +49,7 @@ const Footer = () => {
               </a>
 
               <a
-                href=''
+                href='https://www.instagram.com/teleprolink/'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='p-2 bg-gray-800 rounded-full hover:bg-primary transition-colors'>

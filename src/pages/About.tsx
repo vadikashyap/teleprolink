@@ -1,21 +1,10 @@
 import React from "react";
 import {
-  History,
-  Target,
-  Users,
-  Linkedin,
-  Globe2,
   CheckCircle2,
-  Cpu,
   ShieldCheck,
-  TrendingUp,
-  Mail,
-  Lightbulb,
-  Award,
   PhoneCall,
   MessageSquare,
 } from "lucide-react";
-import { motion } from "framer-motion";
 import SEO from "../components/SEO";
 import ourStoryImg from "../assets/Our-Story.png";
 import Reveal from "../components/Reveal";
