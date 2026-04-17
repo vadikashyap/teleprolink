@@ -4,6 +4,7 @@ import {
   ShieldCheck,
   PhoneCall,
   MessageSquare,
+  GlobeLock,
 } from "lucide-react";
 import SEO from "../components/SEO";
 import ourStoryImg from "../assets/Our-Story.png";
@@ -205,6 +206,10 @@ const AboutPage = () => {
               <div className='flex items-center space-x-2'>
                 <MessageSquare size={24} className='text-white' />
                 <span className='text-lg font-medium'>SMS Services</span>
+              </div>
+              <div className='flex items-center space-x-2'>
+                <GlobeLock size={24} className='text-white' />
+                <span className='text-lg font-medium'>Global Connectivity</span>
               </div>
             </div>
           </div>
