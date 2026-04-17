@@ -595,7 +595,7 @@ const ServicesPage = () => {
           <div className='flex-shrink-0'>
             <button
               onClick={() => navigate("/privacy")}
-              className='bg-white text-primary hover:bg-gray-50 px-10 py-5 rounded-full font-bold text-lg shadow-xl transition-all hover:scale-105'>
+              className='bg-white text-primary hover:bg-gray-50 px-10 py-5 rounded-full font-bold text-lg shadow-xl transition-all hover:scale-105 cursor-pointer'>
               Learn About Security
             </button>
           </div>
