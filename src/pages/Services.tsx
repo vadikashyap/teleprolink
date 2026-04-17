@@ -15,6 +15,7 @@ import {
   Globe,
   Network,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import SEO from "../components/SEO";
 import bg1 from "../assets/bg-1.png";
@@ -27,6 +28,7 @@ import OPT from "../assets/lottiefiles/VerificationCode.lottie";
 import radio from "../assets/lottiefiles/radio.lottie";
 
 const ServicesPage = () => {
+  const navigate = useNavigate();
   const smsServices = [
     {
       title: "A2P & Bulk SMS",
@@ -591,7 +593,9 @@ const ServicesPage = () => {
             </p>
           </div>
           <div className='flex-shrink-0'>
-            <button className='bg-white text-primary hover:bg-gray-50 px-10 py-5 rounded-full font-bold text-lg shadow-xl transition-all hover:scale-105'>
+            <button
+              onClick={() => navigate("/privacy")}
+              className='bg-white text-primary hover:bg-gray-50 px-10 py-5 rounded-full font-bold text-lg shadow-xl transition-all hover:scale-105'>
               Learn About Security
             </button>
           </div>
