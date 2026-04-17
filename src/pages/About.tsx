@@ -34,7 +34,7 @@ const AboutPage = () => {
               backbone of every successful business.
             </h1>
             <p className='text-xl mb-2 text-gray-600 leading-relaxed max-w-xl'>
-              <b>Teleprolink.com</b> is built on one belief: technology should
+              <b>TeleProLink</b> is built on one belief: technology should
               simplify growth, not slow it down. We work with clients who value
               quality, clarity, and dependable outcomes—delivering solutions
               with a practical mindset and a strong focus on results. From
