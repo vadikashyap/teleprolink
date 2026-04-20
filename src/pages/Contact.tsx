@@ -34,7 +34,7 @@ const ContactPage = () => {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: " ", // User needs to replace this
+          access_key: "0f328619-1592-4d88-8402-91f114b17351", // User needs to replace this
           ...formData,
           subject: `Contact Form Submission from ${formData.name}`,
         }),
