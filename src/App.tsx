@@ -14,10 +14,11 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import LegalCompliance from "./pages/LegalCompliance";
 import Maintenance from "./pages/Maintenance";
 
 // Maintenance Mode Flag
-const isMaintenanceMode = true;
+const isMaintenanceMode = false;
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -34,7 +35,7 @@ function App() {
       <Router>
         <ScrollToTop />
         <Routes>
-          <Route path="*" element={<Maintenance />} />
+          <Route path='*' element={<Maintenance />} />
         </Routes>
       </Router>
     );
@@ -115,6 +116,18 @@ function App() {
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.4 }}>
                   <TermsOfService />
+                </motion.div>
+              }
+            />
+            <Route
+              path='/legal-compliance'
+              element={
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.4 }}>
+                  <LegalCompliance />
                 </motion.div>
               }
             />

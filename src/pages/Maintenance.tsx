@@ -76,7 +76,7 @@ const Maintenance = () => {
 
           <div className='grid items-center justify-center gap-4 max-w-md mx-auto'>
             <a
-              href='mailto:info@teleprolink.com'
+              href='mailto:sales@teleprolink.com'
               className='bg-white border border-slate-200 p-4 rounded-2xl flex items-center space-x-4 hover:border-primary/30 transition-all group shadow-sm'>
               <div className='bg-primary/10 p-2 rounded-lg text-primary group-hover:scale-110 transition-transform'>
                 <Mail className='w-5 h-5' />

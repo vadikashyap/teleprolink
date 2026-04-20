@@ -5,7 +5,9 @@ import {
   Phone,
   MapPin,
   Linkedin,
+  X,
   Globe,
+  Instagram,
   MessageSquare,
 } from "lucide-react";
 import tplRoundLogo from "../assets/tpl-round-logo.svg";
@@ -32,16 +34,26 @@ const Footer = () => {
           <div className='flex flex-col items-center md:items-start space-y-6'>
             <div className='flex space-x-4'>
               <a
-                href=''
+                href='https://www.linkedin.com/company/teleprolink-limited/'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='p-2 bg-gray-800 rounded-full hover:bg-primary transition-colors'>
                 <Linkedin size={20} />
               </a>
               <a
-                href='mailto:info@teleprolink.com'
+                href='https://x.com/voice_sms_did'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='p-2 bg-gray-800 rounded-full hover:bg-primary transition-colors'>
-                <Mail size={20} />
+                <X size={20} />
+              </a>
+
+              <a
+                href='https://www.instagram.com/teleprolink/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='p-2 bg-gray-800 rounded-full hover:bg-primary transition-colors'>
+                <Instagram size={20} />
               </a>
             </div>
           </div>
@@ -51,39 +63,32 @@ const Footer = () => {
           <h4 className='text-lg font-semibold mb-6'>Our Services</h4>
           <ul className='space-y-4 text-gray-400'>
             <li>
-              <Link
-                to='/services'
+              <a
+                href='/services#sms'
                 className='hover:text-primary transition-colors'>
-                A2P & Bulk SMS
-              </Link>
+                SMS Service
+              </a>
             </li>
             <li>
-              <Link
-                to='/services'
+              <a
+                href='/services#voice'
                 className='hover:text-primary transition-colors'>
-                Transactional Messaging
-              </Link>
+                Voice Service
+              </a>
             </li>
-            <li>
-              <Link
-                to='/services'
+            {/* <li>
+              <a
+                href='/services#otp'
                 className='hover:text-primary transition-colors'>
                 OTP Services
-              </Link>
-            </li>
+              </a>
+            </li> */}
             <li>
-              <Link
-                to='/services'
+              <a
+                href='/services#global'
                 className='hover:text-primary transition-colors'>
-                Wholesale SMS Trading
-              </Link>
-            </li>
-            <li>
-              <Link
-                to='/services'
-                className='hover:text-primary transition-colors'>
-                Premium Voice Solutions
-              </Link>
+                Global Connectivity
+              </a>
             </li>
           </ul>
         </div>
@@ -100,13 +105,6 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                to='/about'
-                className='hover:text-primary transition-colors'>
-                Leadership
-              </Link>
-            </li>
-            <li>
-              <Link
                 to='/contact'
                 className='hover:text-primary transition-colors'>
                 Contact Us
@@ -114,9 +112,9 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                to='/trust'
-                className='hover:text-primary transition-colors'>
-                Trust & Security
+                to='/legal-compliance'
+                className='hover:text-primary transition-colors '>
+                Legal & Compliance
               </Link>
             </li>
           </ul>
@@ -135,19 +133,13 @@ const Footer = () => {
             </li>
             <li className='flex items-center space-x-3'>
               <Mail className='text-primary flex-shrink-0' size={18} />
-              <span>info@teleprolink.com</span>
+              <span>sales@teleprolink.com</span>
             </li>
           </ul>
         </div>
       </div>
 
       <div className='container-wide pt-10 border-t border-gray-800 flex flex-col items-center text-center space-y-6'>
-        <p className='text-gray-400 leading-relaxed max-w-2xl'>
-          TeleProLink is your trusted startup telecom partner headquartered in
-          Hong Kong. We provide powerful, high-quality SMS and crystal-clear
-          voice solutions designed to help businesses connect, engage, and grow
-          globally.
-        </p>
         <div className='w-full flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm'>
           <p>© {new Date().getFullYear()} TeleProLink. All rights reserved.</p>
           <div className='flex space-x-6 mt-4 md:mt-0'>
