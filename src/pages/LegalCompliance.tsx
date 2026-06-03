@@ -179,9 +179,9 @@ const LegalCompliance = () => {
                   <Mail className='text-primary flex-shrink-0' size={20} />
                   <span className='font-semibold'>Email:</span>
                   <a
-                    href='mailto:support@teleprolink.com'
+                    href='mailto:sales@teleprolink.com'
                     className='text-primary hover:underline'>
-                    support@teleprolink.com
+                    sales@teleprolink.com
                   </a>
                 </div>
 
